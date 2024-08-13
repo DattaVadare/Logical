@@ -1,0 +1,37 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class ReversArray {
+    public static void main(String[] args) {
+      reverseArray();
+    }
+    
+    public static void reverseArray() {
+	  
+	  char s[]= {'D','A','T','T','A'};
+	  // output=["A","T","T","A","D"]
+	  int left =0;
+	  int right=s.length-1;
+	  char temp;
+	  while (left<right) {
+		// Swaping array 
+		  temp=s[right];
+		  s[right]=s[left];
+		  s[left]=temp;
+		  left++;
+		  right--;
+	}
+	  
+	
+	  System.out.print("[");
+	  for(int i=0;i<s.length;i++) {
+		  
+		  if(i==s.length-1) {
+			  System.out.print("\""+s[i]+"\""+"]");
+		  }else {
+			  System.out.print("\""+s[i]+"\""+",");
+		  }
+	  }
+      
+  }
+}
