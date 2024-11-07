@@ -1,0 +1,17 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class Duplicates  {
+    public static void main(String[] args) {
+       int num[]={1,2,3,2,1,5,5,7,8,10,8,10};
+       Set<Integer>seen = new HashSet<Integer>();
+       List<Integer> duplicates  = new ArrayList<Integer>();
+       for(int n:num){
+           if(!seen.add(n)){
+               duplicates .add(n);
+           }
+       }
+       
+       System.out.println("duplicates  Elements in arrays is="+duplicates );
+    }
+}
